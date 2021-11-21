@@ -19,9 +19,13 @@ db.once('open', () => {
 app.engine('hbs', engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 app.get('/', (req, res) => {
   res.render('index')
 })
+app.get('/result', (req, res) => {
+  res.render('result')
+})
 app.listen(PORT, () => {
-  console.log(`The server is running on http://localhost:${PORT}!`)
+  console.log(`The server is running on http://localhost${PORT}!`)
 })
