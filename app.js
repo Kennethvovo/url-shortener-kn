@@ -3,6 +3,7 @@ const app = express()
 const { engine } = require('express-handlebars')
 const PORT = 3000
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 mongoose.connect('mongodb://localhost/url-shortener')
 
 const db = mongoose.connection
@@ -17,7 +18,7 @@ db.once('open', () => {
 
 app.engine('hbs', engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
-
+app.use(express.urlencoded({ extended: true }))
 app.get('/', (req, res) => {
   res.render('index')
 })
