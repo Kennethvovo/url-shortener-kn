@@ -27,5 +27,5 @@ app.get('/result', (req, res) => {
   res.render('result')
 })
 app.listen(PORT, () => {
-  console.log(`The server is running on http://localhost${PORT}!`)
+  console.log(`The server is running on http://localhost:${PORT}`)
 })
