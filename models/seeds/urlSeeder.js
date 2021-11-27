@@ -13,11 +13,11 @@ db.on('error', () => {
 db.once('open', () => {
   datas.forEach((data) => {
     const shortCode = generateRandomIndex()
-    urlList.create = {
+    urlList.create({
       originalURL: data,
-      shortURL: `http:localhost:${PORT}/${shortCode}`,
+      shortURL: `http:localhost:${port}/${shortCode}`,
       shortCode,
-    }
+    })
   })
   console.log('done')
 })
