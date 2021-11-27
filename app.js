@@ -25,6 +25,7 @@ app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static('public'))
 app.get('/', (req, res) => {
   res.render('index')
 })
