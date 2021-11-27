@@ -1,14 +1,8 @@
-const mongoose = require('mongoose')
+const db = require('../../config/mongoose')
 const urlList = require('../url')
 const datas = require('../../test-url.json')
 const PORT = 3000
 const generateRandomIndex = require('../../generateRandomIndex')
-mongoose.connect('mongodb://localhost/url-shortener')
-const db = mongoose.connection
-
-db.on('error', () => {
-  console.log('mongodb error!')
-})
 
 db.once('open', () => {
   datas.forEach((data) => {
