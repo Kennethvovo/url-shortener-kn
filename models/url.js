@@ -1,17 +1,18 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
 const urlSchema = new Schema({
   originalURL: {
-    typeL: String,
-    required: true,
+    type: String,
+    require: true,
   },
   shortURL: {
-    typeL: String,
-    required: true,
+    type: String,
+    require: true,
   },
   shortCode: {
-    typeL: String,
-    required: true,
+    type: String,
+    require: true,
   },
 })
 
