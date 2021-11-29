@@ -17,7 +17,7 @@ Don't worry about hell long url anymore. With this tiny tool, you can shrink dow
 1. clone the repo
 
 ```
-git clone
+git clone https://github.com/Kennethvovo/url-shortener-kn.git
 ```
 
 2. In your terminal, move to the directory as following
@@ -49,7 +49,7 @@ npm run dev
 ## Tools
 
 - Node.js v17.0.1
-- Express
-- Express-hanldebars
+- Express v4.17.1
+- Express-hanldebars v4.0.2
 - MongoDB
 - Mongoose
